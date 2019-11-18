@@ -36,17 +36,19 @@ You should then create and populate a folder in your home directory called wallp
 
 ## Unsupported environments
 
-openbox
-obmenu-generator
-tint2
-xcompmgr
-nitrogen
-xautolock
-lemonbar
-i3lock-fancy
-flameshot
-xcape
-synapse
+- openbox
+- obmenu-generator
+- tint2
+- xcompmgr
+- nitrogen
+- xautolock
+- lemonbar
+- i3lock-fancy
+- flameshot
+- xcape
+- synapse
+- xdotool
+- xfce4-terminal
 
 You will have to install the above applications yourself, then run cpConfig.sh
 
