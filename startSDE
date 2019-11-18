@@ -1,4 +1,5 @@
 #!/bin/sh
 
 startx &
-openbox --config-file="/home/sid/.config/SDE/SDE-rc.xml"
+openbox --config-file="$HOME/.config/SDE/SDE-rc.xml"
+exec "/usr/bin/initSDE"
