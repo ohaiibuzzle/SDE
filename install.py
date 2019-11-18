@@ -97,12 +97,12 @@ def get_os_name():
 
 def i3lock_fancy_install():
     i3lock_git = "https://github.com/meskarune/i3lock-fancy.git"
-    subprocess.run(['git', 'clone', i3lock_git, cwd+"i3lock-fancy"])
+    subprocess.run(['git', 'clone', i3lock_git], cwd=cwd)
     subprocess.run(["sudo", "make", "install"], cwd=cwd)
 
 def install_lemonbar():
     lemon_git = "https://github.com/LemonBoy/bar"
-    subprocess.run(['git', 'clone', i3lock_git, cwd+"lemonbar"])
+    subprocess.run(['git', 'clone', lemon_git], cwd=cwd)
     subprocess.run(['make'], cwd=cwd)
     subprocess.run(["sudo", "make", "install"], cwd=cwd)
 
@@ -126,7 +126,7 @@ print("installing dependencies...")
 for depend in ['openbox', 'obmenu-generator', 'tint2', 'xcompmgr', 'nitrogen', 'xautolock', 'lemonbar', 'i3lock-fancy', 'flameshot', 'xcape', 'synapse']:
     print("installing " + depend + "...")
     if not depends[depend][distro] == "repo":
-        subprocess.run(["sh", "-c", "\'", depends[depend][distro] + " " + depend + "\'"])
+        subprocess.run(["sh", "-c", depends[depend][distro] + " " + depend])
     else:
         installers[depend]()
 
