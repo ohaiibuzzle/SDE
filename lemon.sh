@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/sh
 
 Clock(){
 	TIME=$(date "+%S seconds past %H%M")

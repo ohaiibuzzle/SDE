@@ -31,15 +31,19 @@ cp "$PWD/tint2rc" "$HOME/.config/tint2/tint2rc"
 
 echo "init.sh"
 cp "$PWD/init.sh" "$HOME/init.sh"
+chmod +x "$HOME/init.sh"
 
 echo "randomWallpaper.sh"
 cp "$PWD/randomWallpaper.sh" "$HOME/randomWallpaper.sh"
+chmod +x "$HOME/randomWallpaper.sh"
 
 echo "setWall.sh"
 cp "$PWD/setWall.sh" "$HOME/setWall.sh"
+chmod +x "$HOME/setWall.sh"
 
 echo "lemon.sh"
 cp "$PWD/lemon.sh" "$HOME/lemon.sh"
+chmod +x "$HOME/lemon.sh"
 
 echo "volume_status.py"
 cp "$PWD/volume_status.py" "$HOME/volume_status.py"
