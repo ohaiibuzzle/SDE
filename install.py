@@ -39,37 +39,49 @@ depends = {
         'Arch Linux': 'yay',
         'Ubuntu': 'sudo apt install',
         'Fedora': 'repo'
-    }
+    },
 
     'flameshot': {
         'Arch Linux': 'yay',
         'Ubuntu': 'sudo apt install',
         'Fedora': 'sudo dnf install'
-    }
+    },
 
     'i3lock-fancy': {
         'Arch Linux': 'repo',
         'Ubuntu': 'repo',
         'Fedora': 'repo'
-    }
+    },
 
     'xcape': {
         'Arch Linux': 'yay',
         'Ubuntu': 'sudo apt install',
         'Fedora': 'sudo dnf install'
-    }
+    },
 
     'synapse': {
         'Arch Linux': 'yay',
         'Ubuntu': 'sudo apt install',
         'Fedora': 'sudo dnf install'
-    }
+    },
 
     'obmenu-generator': {
         'Arch Linux': 'yay',
         'Ubuntu': 'repo',
         'Fedora': 'repo',
-    }
+    },
+
+    'xdotool': {
+        'Arch Linux': 'yay',
+        'Ubuntu': 'sudo apt install',
+        'Fedora': 'sudo dnf install'
+    },
+
+    'xfce4-terminal': {
+        'Arch Linux': 'yay',
+        'Ubuntu': 'sudo apt install',
+        'Fedora': 'sudo dnf install'
+    },
 }
 
 def download_file(url, filename, location):
