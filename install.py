@@ -103,8 +103,8 @@ def i3lock_fancy_install():
 def install_lemonbar():
     lemon_git = "https://github.com/LemonBoy/bar"
     subprocess.run(['git', 'clone', i3lock_git, cwd+"lemonbar"])
-    subprocess.run(['make'], cwd=cwd])
-    subprocess.run(["sudo", "make", "install"], cwd=cwd])
+    subprocess.run(['make'], cwd=cwd)
+    subprocess.run(["sudo", "make", "install"], cwd=cwd)
 
 def obm_gen_install():
     obm_gen_url = 'https://github.com/trizen/obmenu-generator/raw/master/obmenu-generator'
