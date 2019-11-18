@@ -109,11 +109,16 @@ installers = {
     'obmenu-generator': obm_gen_install
 }
 
+print("installing dependencies...")
+
 for depend in ['openbox', 'obmenu-generator', 'tint2', 'xcompmgr', 'nitrogen', 'xautolock', 'lemonbar', 'i3lock-fancy', 'flameshot', 'xcape', 'synapse']:
+    print("installing " + depend + "...")
     if not depends[depend][distro] == "repo":
         subprocess.run("sh", "-c", "\'", [depends[depend][distro] + depend] + "\'")
     else:
         installers[depend]()
 
-
+print("copying configs...")
 subprocess.run(['sh', cwd+"cpConfig.sh"])
+
+print("SDE install completed successfully.")
