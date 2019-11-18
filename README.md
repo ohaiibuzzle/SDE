@@ -1,10 +1,10 @@
 # SDE
 
 ## Introduction
-Shan's Desktop Environment, a lightweight openbox-based desktop environment.
+Shan's Desktop Environment, a lightweight openbox-based desktop environment made to balance prettiness and performance, while not sacrificing usability.
 
 The install script works for Ubuntu, Fedora, and Arch Linux.
-If you're not on one of these, then see the section on "Unsupported environments."
+If you're not on one of these, then see the section on "Unsupported environments." Feel free to add your own distro and send a pull, I will look at it at the soonest possible.
 
 #### dependencies:
 
