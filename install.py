@@ -2,7 +2,7 @@ import requests
 import os
 import subprocess
 
-cwd = os.getcwd()
+cwd = os.getcwd() + "/"
 
 depends = {
     'tint2': {
