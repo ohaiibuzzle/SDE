@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 sleep 2 && sh -c "$HOME/setWall.sh" &
 sleep 1 && export TERMINAL="xfce4-terminal" &
