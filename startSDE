@@ -1,4 +1,0 @@
-#!/bin/sh
-
-openbox --config-file="$HOME/.config/SDE/SDE-rc.xml"
-exec "$HOME/init.sh"

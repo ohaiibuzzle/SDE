@@ -131,6 +131,6 @@ for depend in ['openbox', 'obmenu-generator', 'xfce4-terminal', 'tint2', 'xcompm
         installers[depend]()
 
 print("copying files...")
-subprocess.run(['sh', cwd+"cpConfig.sh"])
+subprocess.run(['sh', cwd+"copyFiles.sh"])
 
 print("SDE install completed successfully. You should create and populate ~/wallpapers now.")

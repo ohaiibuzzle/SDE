@@ -63,12 +63,3 @@ echo "obmenu-generator/schema.pl"
 cp "$PWD/schema.pl" "$HOME/.config/obmenu-generator/schema.pl"
 
 echo "Copied files successfully."
-
-chmod +x "$PWD/SDE.desktop"
-
-echo "-> /usr/share/xsessions/SDE.desktop"
-sudo cp "$PWD/SDE.desktop" "/usr/share/xsessions/SDE.desktop"
-
-echo "-> /usr/bin/startSDE"
-chmod +x "$PWD/startSDE"
-sudo cp "$PWD/startSDE" "/usr/bin/startSDE"
