@@ -23,7 +23,7 @@ ActiveWindow(){
 }
 
 Sound(){
-	echo -n $(python ~/volume_status.py)
+	echo -n $(python3.8 ~/volume_status.py)
 }
 
 CPUTemp() {
