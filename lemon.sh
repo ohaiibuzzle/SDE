@@ -1,10 +1,8 @@
-#!/bin/sh
+#!/bin/bash
 
-Clock(){
+Clock() {
 	TIME=$(date "+%S seconds past %H%M")
-
-	echo -e -n "%{B#444444}%{F#f5f4f0} \uf017  ${TIME}" 
-	
+	echo -e -n "%{B#444444}%{F#f5f4f0} \uf017  ${TIME}"
 }
 
 Cal() {
@@ -12,7 +10,7 @@ Cal() {
     echo -e -n "%{B#f2e5bc}%{F#303030} \uf073  ${DATE}"
 }
 
-ActiveWindow(){
+ActiveWindow() {
 	len=$(echo -n "$(xdotool getwindowfocus getwindowname)" | wc -m)
 	max_len=70
 	if [ "$len" -gt "$max_len" ];then
@@ -22,13 +20,13 @@ ActiveWindow(){
 	fi
 }
 
-Sound(){
-	echo -n $(python ~/volume_status.py)
+Sound() {
+	echo -n $(python3 ~/volume_status.py)
 }
 
 CPUTemp() {
-	temp=$(sensors | awk 'NR==8' | awk '{split($0,a," "); print a[4]}' | awk 'NR==1')
-	echo -e "%{B#fbf1fc} %{F#cc241d}cpu at ${temp}"
+    temp=$($(echo cat "/sys/class/thermal/$(ls /sys/class/thermal/ | grep thermal_zone | tail -1)/temp") | sed s/000//)
+	echo -e "%{B#fbf1fc} %{F#cc241d}cpu at ${temp}\u00B0C"
 }
 
 while true; do
