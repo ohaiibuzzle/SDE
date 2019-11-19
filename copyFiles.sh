@@ -1,22 +1,20 @@
 #!/bin/sh
+echo "Backing up existing config files if any..."
 
 if [ -d "$HOME/.config/openbox" ]; then
-:
-else
-    mkdir ~/.config/openbox
+    mv "$HOME/.config/openbox" "$HOME/.config/openbox.bak"
 fi
+mkdir ~/.config/openbox
 
 if [ -d "$HOME/.config/tint2" ]; then
-:
-else
-    mkdir ~/.config/tint2
+    mv "$HOME/.config/tint2" "$HOME/.config/tint2.bak"
 fi
+mkdir ~/.config/tint2
 
 if [ -d "$HOME/.config/obmenu-generator" ]; then
-:
-else
-    mkdir ~/.config/obmenu-generator
+    mv "$HOME/.config/obmenu-generator" "$HOME/.config/obmenu-generator.bak"
 fi
+mkdir ~/.config/obmenu-generator
 
 echo -n "->"
 echo "openbox/rc.xml"
