@@ -97,23 +97,31 @@ def get_os_name():
 
 def i3lock_fancy_install():
     i3lock_git = "https://github.com/meskarune/i3lock-fancy.git"
-    subprocess.run(['git', 'clone', i3lock_git], cwd=cwd)
-    subprocess.run(["sudo", "make", "install"], cwd=cwd + "i3lock-fancy")
+    subprocess.run(['git', 'clone', i3lock_git], cwd="/tmp")
+    subprocess.run(["sudo", "make", "install"], cwd="/tmp/i3lock-fancy")
 
 def install_lemonbar():
     lemon_git = "https://github.com/LemonBoy/bar"
-    subprocess.run(['git', 'clone', lemon_git], cwd=cwd)
-    subprocess.run(['make'], cwd=cwd+"bar")
-    subprocess.run(["sudo", "make", "install"], cwd=cwd + "bar")
+    subprocess.run(['git', 'clone', lemon_git], cwd="/tmp")
+    subprocess.run(['make'], cwd="/tmp/bar")
+    subprocess.run(["sudo", "make", "install"], cwd="/tmp/lemonbar")
 
 def obm_gen_install():
     obm_gen_url = 'https://github.com/trizen/obmenu-generator/raw/master/obmenu-generator'
-    download_file(obm_gen_url, 'obmenu-generator', cwd)
-    subprocess.run(['chmod', '+x', cwd + 'obmenu-generator'])
-    subprocess.run(['sudo', '/bin/cp', cwd + 'obmenu-generator', '/usr/bin/obmenu-generator'])
+    download_file(obm_gen_url, 'obmenu-generator', "/tmp")
+    subprocess.run(['chmod', '+x', '/tmp/obmenu-generator'])
+    subprocess.run(['sudo', '/bin/cp', '/tmp/obmenu-generator', '/usr/bin/obmenu-generator'])
     
 distro = get_os_name()
 print("detected distro " + distro)
+
+if distro == 'Arch Linux':
+    print("This script requires yay to install packages on Arch Linux. Install it? (y/n) "
+    answer = input("> ")
+    if str(answer) == "y":
+        subprocess.run(['sudo', 'pacman', '-Sy', 'yay'])
+    else:
+        print("Script cannot continue without yay. Exiting...")
 
 installers = {
     'lemonbar': install_lemonbar,
