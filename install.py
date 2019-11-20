@@ -122,6 +122,7 @@ if distro == 'Arch Linux':
         subprocess.run(['sudo', 'pacman', '-Sy', 'yay'])
     else:
         print("Script cannot continue without yay. Exiting...")
+        exit()
 
 installers = {
     'lemonbar': install_lemonbar,
