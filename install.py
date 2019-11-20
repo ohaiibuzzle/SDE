@@ -104,7 +104,7 @@ def install_lemonbar():
     lemon_git = "https://github.com/LemonBoy/bar"
     subprocess.run(['git', 'clone', lemon_git], cwd="/tmp")
     subprocess.run(['make'], cwd="/tmp/bar")
-    subprocess.run(["sudo", "make", "install"], cwd="/tmp/lemonbar")
+    subprocess.run(["sudo", "make", "install"], cwd="/tmp/bar")
 
 def obm_gen_install():
     obm_gen_url = 'https://github.com/trizen/obmenu-generator/raw/master/obmenu-generator'
