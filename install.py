@@ -116,7 +116,7 @@ distro = get_os_name()
 print("detected distro " + distro)
 
 if distro == 'Arch Linux':
-    print("This script requires yay to install packages on Arch Linux. Install it? (y/n) "
+    print("This script requires yay to install packages on Arch Linux. Install it? (y/n) ")
     answer = input("> ")
     if str(answer) == "y":
         subprocess.run(['sudo', 'pacman', '-Sy', 'yay'])
